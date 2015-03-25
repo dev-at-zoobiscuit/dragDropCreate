@@ -2,15 +2,20 @@
 <html>
 <head>
 	<title>Testing drop zone</title>
+	<script type="text/javascript" src="js/modernizr.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div id="ec-target"></div>
 
-
+<div class="ec-draggable ec-target-element" data-ec-data="I'm an element">Drag me :)</div>
+<div class="ec-draggable ec-target-element" data-ec-data="I'm also an element">Drag me too :)</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="js/html.sortable.js"></script>
+<!--script type="text/javascript" src="js/html.sortable.js"></script-->
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="js/interact.js"></script>
 <script type="text/javascript" src="js/equationCreator.js"></script>
+
 </body>
 </html>

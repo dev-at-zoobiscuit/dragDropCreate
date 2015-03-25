@@ -11,10 +11,16 @@ $(function(){
 
 	var eq = { //this is the equation creator object we'll attach to the global context
 		addElement: function(newElement, data){
+			
 			targetDiv.append(this.createGridElement(newElement,data));
+
 		},
 		createGridElement: function(newElement,data){ //this function will take a standard DOM element and attaches a data field we can use to store stuff
-			return $(newElement).attr(dataAttrib,data).addClass(elementClass);
+			var ret =  $(newElement).addClass(elementClass);
+			if(data != null){
+				ret.addElement(dataAttrib,data);
+			}
+			return ret;
 		},
 		returnData: function(){
 			var ret = [];
@@ -27,4 +33,19 @@ $(function(){
 
 
 	window.equationCreator = eq;
+	$("#ec-target").sortable();
+	$(".ec-draggable").draggable({
+      connectToSortable: "#ec-target",
+      helper: "clone",
+      revert: "invalid"
+    });
+
+	if(!$("html").hasClass("no-touch")) {
+		$(".ec-draggable").click(function(e){
+    	console.log("Clicking like a mofo");
+    	console.log(this);
+    	eq.addElement($(this).clone());
+    });
+	}
+
 });

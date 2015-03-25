@@ -1,5 +1,6 @@
 
 
+
 .ec-target-element {
 	margin: 10px;
 	min-height: 50px;
@@ -7,4 +8,13 @@
 	max-width: 150px;
 	background-color: blue;
 	color: yellow;
+}
+
+#ec-target {
+	min-width: 200px;
+	min-height: 200px;
+	border: black solid 2px;
+	> .ec-target-element {
+		float: left;
+	}
 }

@@ -1,1 +1,1 @@
-.ec-target-element{margin:10px;min-height:50px;width:150px;max-width:150px;background-color:#00f;color:#ff0}
+.ec-target-element{margin:10px;min-height:50px;width:150px;max-width:150px;background-color:#00f;color:#ff0}#ec-target{min-width:200px;min-height:200px;border:#000 solid 2px}#ec-target>.ec-target-element{float:left}
