@@ -33,19 +33,23 @@ $(function(){
 
 
 	window.equationCreator = eq;
+
+
 	$("#ec-target").sortable();
+	
+
 	$(".ec-draggable").draggable({
       connectToSortable: "#ec-target",
       helper: "clone",
       revert: "invalid"
     });
 
-	if(!$("html").hasClass("no-touch")) {
+	//if(!$("html").hasClass("no-touch")) {
 		$(".ec-draggable").click(function(e){
     	console.log("Clicking like a mofo");
     	console.log(this);
     	eq.addElement($(this).clone());
     });
-	}
+	//}
 
 });
